@@ -19,8 +19,10 @@ public class Principal {
         CharStream cs = CharStreams.fromFileName(args[0]);
         LaLexer lex = new LaLexer(cs);
         
-        while(lex.nextToken().getType() != Token.EOF){
-            System.out.print("");
+        Token t = null;
+        
+        while((t = lex.nextToken()).getType() != Token.EOF){
+            System.out.println("<"+LaLexer.VOCABULARY.getDisplayName(t.getType())+","+t.getText()+">");
         }
     }
     
