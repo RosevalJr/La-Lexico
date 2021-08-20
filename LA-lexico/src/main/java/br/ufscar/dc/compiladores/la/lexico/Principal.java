@@ -5,6 +5,7 @@
  */
 package br.ufscar.dc.compiladores.la.lexico;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -18,12 +19,17 @@ public class Principal {
     public static void main(String args[]) throws IOException{
         CharStream cs = CharStreams.fromFileName(args[0]);
         LaLexer lex = new LaLexer(cs);
+        FileWriter myWriter = new FileWriter(args[1]);
         
         Token t = null;
-        
-        while((t = lex.nextToken()).getType() != Token.EOF){
-            System.out.println("<"+LaLexer.VOCABULARY.getDisplayName(t.getType())+","+t.getText()+">");
+
+        while(Token.EOF != (t = lex.nextToken()).getType()){
+            if(t.getType() == 1)
+                myWriter.write("<'"+t.getText()+"','"+t.getText()+"'>\n");
+            else
+                myWriter.write("<"+t.getText()+","+LaLexer.VOCABULARY.getDisplayName(t.getType())+">\n");
         }
+        myWriter.close();
     }
     
 }
