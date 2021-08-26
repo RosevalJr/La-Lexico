@@ -24,10 +24,11 @@ public class Principal {
         Token t = null;
 
         while(Token.EOF != (t = lex.nextToken()).getType()){
-            if(t.getType() == 1)
+
+            if(t.getType() == 1 | (t.getType() >= 8 && t.getType() <= 14))
                 myWriter.write("<'"+t.getText()+"','"+t.getText()+"'>\n");
             else
-                myWriter.write("<"+t.getText()+","+LaLexer.VOCABULARY.getDisplayName(t.getType())+">\n");
+                myWriter.write("<'"+t.getText()+"',"+LaLexer.VOCABULARY.getDisplayName(t.getType())+">\n");
         }
         myWriter.close();
     }
