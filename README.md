@@ -1,5 +1,5 @@
 # La-Lexico
-Analisador léxico para a linguagem LA (Linguagem Algorítmica).
+Analisador léxico para a [linguagem LA (Linguagem Algorítmica)](https://docs.google.com/document/d/1ZuFtrLSeC-Fkh24oacKs5KBibHp_27CrFnQISZwHR2c/edit).
 
 ## Autores
 
