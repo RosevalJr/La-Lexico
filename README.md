@@ -1,19 +1,19 @@
 # La-Lexico
 Analisador léxico para a linguagem LA (Linguagem Algorítmica).
 
-##Autores
+## Autores
 
-Nathan Celestino de Oliveira - 758601
+Roseval Donisete Malaquias Junior - 758597</br>
+Nathan Celestino de Oliveira - 758601</br>
 Yuri Gabriel Aragão da Silva - 758608
-Roseval Donisete Malaquias Junior - 758597
 
-##Sobre o trabalho
+## Sobre o trabalho
 
-Este trabalho foi desenvolvido através da linguagem Java utilizando a API fornecida pela biblioteca antlr4 (ANother Tool for Language Recognition),
+Este trabalho foi desenvolvido através da linguagem Java utilizando a API fornecida pela biblioteca ANTLR4 (ANother Tool for Language Recognition),
 com o propósito de efetuar uma análise léxica na linguagem LA (Linguagem Algorítmica) elaborada pelo professor Jander Moreira. O desenvolvimento deste trabalho
 baseou-se nas aulas disponibilizadas pelo professor Daniel Lucrédio durante o período letivo ENPE 3.
 
-##Dependências
+## Dependências
 
 Este projeto possui as seguintes dependências principais:
 
@@ -22,13 +22,13 @@ Este projeto possui as seguintes dependências principais:
 
 As dependências encontram-se no arquivo pom.xml 
 
-##Especificações do OpenJDK
+## Especificações do OpenJDK
 
 Openjdk 11.0.11 2021-04-20
 OpenJDK Runtime Environment
 OpenJDK 64-Bit Server VM
 
-##Execução do analisador léxico
+## Execução do analisador léxico
 
 Primeiramente é recomendado instalar a IDE NetBeans 12.4, efetuar o comando build & clean.
 
@@ -46,5 +46,3 @@ versões de OpenJDK especificadas anteriormente.
 
 Os arquivos de entrada e arquivos de saída foram disponibilizados através da plataforma Google Classroom, os quais
 servirão como casos de testes para a corretude do projeto.
-
-
