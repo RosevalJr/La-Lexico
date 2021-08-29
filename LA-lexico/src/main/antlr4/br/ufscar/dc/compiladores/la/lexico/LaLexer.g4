@@ -13,12 +13,12 @@ NUM_REAL: ('0'..'9')+ '.' ('0'..'9')+;
 
 IDENT: ('a'..'z' | 'A'..'Z')('a'..'z' | 'A'..'Z'|'0'..'9' | '_')*;
 
-CADEIA: '"' (ESC_SEQ | ~('"' | '\\') )* '"';
+CADEIA: '"' (~('\n' | '\r' | '"'))* '"';
 
 fragment
 ESC_SEQ: '\\"';
 
-COMENTARIO: '{' ~('}')* '}' -> skip;
+COMENTARIO: '{' (~('}' | '\n' | '\r'))* '}' -> skip;
 
 WS: (' ' | '\t' | '\r' | '\n' ) -> skip;
 
