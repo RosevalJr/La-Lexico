@@ -15,8 +15,7 @@ public class ErrorListenerLA extends BaseErrorListener {
             throws ParseCancellationException{
         String[] tokens = msg.split("\'"); // tokens[1] contem o simbolo que causou o erro
 
-        // 3 erros sao detectados, token invalido, comentario nao fechado e cadeia nao fehcada.
-        // Problema deve estar no LaLexer.g4, sendo que comentario nao fechado nao e reconhecido.
+        // 3 erros sao detectados, token invalido, comentario nao fechado e cadeia nao fechada.
         if(tokens[1].charAt(0) == '{' && tokens[1].charAt(tokens[1].length()-1) != '}'){
             throw new ParseCancellationException("Linha " + line + ":" + " comentario nao fechado" + "\n");
         }
